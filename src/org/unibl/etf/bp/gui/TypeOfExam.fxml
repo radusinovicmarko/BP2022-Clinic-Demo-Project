@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="461.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.unibl.etf.bp.gui.TypeOfExamController">
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="searchTF" onKeyTyped="#onSearchAction" promptText="Pretraži" />
+            <TableView fx:id="typesOfExamsTableView" onMouseClicked="#onTypeSelected" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn prefWidth="122.39999085664749" text="Šifra pregleda" />
+                <TableColumn prefWidth="229.60004425048828" text="Naziv pregleda" />
+                  <TableColumn prefWidth="185.59994506835938" text="Trenutna cijena sa osiguranjem" />
+                  <TableColumn prefWidth="183.2000732421875" text="Trenutna cijena bez osiguranja" />
+              </columns>
+            </TableView>
+            <HBox spacing="5.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#onAddAction" prefWidth="70.0" text="Dodaj" />
+                  <Button fx:id="deleteBtn" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onDeleteAction" prefWidth="70.0" text="Obriši" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

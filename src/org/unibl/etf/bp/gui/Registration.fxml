@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="270.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.unibl.etf.bp.gui.RegistrationController">
+   <center>
+      <VBox prefHeight="102.0" prefWidth="285.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="10.0" layoutY="10.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="200.0" text="Registracija pacijenta">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" spacing="5.0">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox spacing="5.0">
+               <children>
+                  <Label prefWidth="200.0" text="JMB">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="jmbTF" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="200.0" text="Ime">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="firstNameTF" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="36.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="200.0" text="Prezime">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="lastNameTF" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="61.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="200.0" text="Datum rodjenja">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="datePicker" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="61.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="200.0" text="E-Mail adresa">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="emailTF" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="112.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="200.0" text="Adresa stanovanja">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="addressTF" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="162.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="200.0" text="Mjesto prebivališta">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="placeTF" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="192.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="200.0" text="Broj zdravstvenog kartona">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="medicalCardTF" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="223.0" spacing="5.0">
+               <children>
+                  <Region />
+                  <CheckBox fx:id="insuranceCB" mnemonicParsing="false" onAction="#onChecked" text="Osiguranje" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox fx:id="insuranceNumberHB" layoutX="10.0" layoutY="223.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="200.0" text="Registarski broj osiguranja">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="insuranceNumberTF" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="276.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="200.0" text="Krvna grupa">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <RadioButton fx:id="aRB" mnemonicParsing="false" text="A" />
+                        <RadioButton fx:id="bRB" mnemonicParsing="false" text="B" />
+                        <RadioButton fx:id="abRB" mnemonicParsing="false" text="AB" />
+                        <RadioButton fx:id="zeroRB" mnemonicParsing="false" text="0" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="306.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="200.0" text="Bračni status">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="marriageTF" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="336.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="200.0" text="Telefonski broj">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="phoneTF" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="367.0" spacing="5.0">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="registerBtn" mnemonicParsing="false" onAction="#onRegisterAction" prefWidth="150.0" text="Registracija">
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

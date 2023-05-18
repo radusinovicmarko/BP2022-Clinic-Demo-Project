@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.unibl.etf.bp.gui.HomepageController">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar HBox.hgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" text="Fajl">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onCloseAction" text="Odjavi se" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Registracije">
+                    <items>
+                      <MenuItem fx:id="newRegistrationMenuItem" mnemonicParsing="false" onAction="#onNewRegistrationAction" text="Nova registracija" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Pregledi">
+                    <items>
+                      <MenuItem fx:id="newExamMenuItem" mnemonicParsing="false" onAction="#onNewExamAction" text="Novi pregled" />
+                        <MenuItem mnemonicParsing="false" onAction="#onPreviousExamsAction" text="Prethodni pregledi" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Naručenja">
+                    <items>
+                        <MenuItem fx:id="newAppointementMenuItem" mnemonicParsing="false" onAction="#onNewAppointmentAction" text="Novo naručenje" />
+                      <MenuItem mnemonicParsing="false" onAction="#onTodaysAppointmentsAction" text="Naručeni pacijenti danas" />
+                        <MenuItem mnemonicParsing="false" onAction="#onNextDaysAppointmentsAction" text="Naručeni pacijenti narednih dana" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Recepti i uputnice">
+                    <items>
+                      <MenuItem fx:id="newPrescriptionMenuItem" mnemonicParsing="false" onAction="#onNewPrescriptionAction" text="Novi recept" />
+                        <MenuItem fx:id="newOrderMenuItem" mnemonicParsing="false" onAction="#onNewOrderAction" text="Nova uputnica" />
+                        <MenuItem mnemonicParsing="false" onAction="#onIssuedPrescriptionsAction" text="Izdani recepti" />
+                        <MenuItem mnemonicParsing="false" onAction="#onIssuedOrdersAction" text="Izdane uputnice" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Šifarnici">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onIllnessesAction" text="Bolesti" />
+                        <MenuItem mnemonicParsing="false" onAction="#onMedicationsAction" text="Lijekovi" />
+                        <MenuItem mnemonicParsing="false" onAction="#onTypesOfExamsAction" text="Vrste pregleda" />
+                        <MenuItem mnemonicParsing="false" onAction="#onServicesAction" text="Usluge" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Pomoć">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onAboutAction" text="O aplikaciji" />
+                  </items>
+                </Menu>
+              </menus>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </MenuBar>
+            <Region HBox.hgrow="ALWAYS">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Region>
+            <Label fx:id="nameAndTeamLbl" text="Ambulanta : Tim">
+               <HBox.margin>
+                  <Insets right="10.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="searchTF" onKeyTyped="#onSearchAction" promptText="Pretraga pacijenata po prezimenu" />
+            <TableView fx:id="pacientsTableView" onMouseClicked="#onItemClicked" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn prefWidth="111.20001524686813" text="JMB" />
+                <TableColumn prefWidth="138.39996337890625" text="Ime" />
+                  <TableColumn prefWidth="138.39996337890625" text="Prezime" />
+                  <TableColumn prefWidth="138.39996337890625" text="Datum rodjenja" />
+                  <TableColumn prefWidth="138.39996337890625" text="E-Mail adresa" />
+                  <TableColumn prefWidth="138.39996337890625" text="Adresa stanovanja" />
+                  <TableColumn prefWidth="138.39996337890625" text="Broj zdravstvenog kartona" />
+                  <TableColumn prefWidth="138.39996337890625" text="Ima osiguranje" />
+              </columns>
+            </TableView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="712.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.unibl.etf.bp.gui.PatientController">
+  <tabs>
+    <Tab text="Informacije">
+         <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <VBox BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="JMB">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="jmbTF" disable="true" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="15.0" layoutY="15.0" spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="Ime">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="firstNameTF" disable="true" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="15.0" layoutY="50.0" spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="Prezime">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="lastNameTF" disable="true" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="15.0" layoutY="96.0" spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="E-Mail adresa">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="emailTF" disable="true" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="126.0" spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="Adresa stanovanja">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="addressTF" disable="true" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="152.0" spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="Datum rodjenja">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <DatePicker fx:id="dateOfBirthTF" disable="true" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="177.0" spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="Broj zdravstvenog kartona">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="medicalCardTF" disable="true" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="203.0" spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="Status osiguranja">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <CheckBox fx:id="insuranceCB" disable="true" mnemonicParsing="false" HBox.hgrow="ALWAYS" />
+                              <Label text="Ima osiguranje">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="2.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="228.0" spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="Registarski broj osiguranja">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="insuranceNumberTF" disable="true" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="254.0" spacing="10.0">
+                           <children>
+                              <Label prefWidth="150.0" text="Krvna grupa">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <RadioButton fx:id="aRB" disable="true" mnemonicParsing="false" text="A" />
+                              <RadioButton fx:id="bRB" disable="true" mnemonicParsing="false" text="B" />
+                              <RadioButton fx:id="abRB" disable="true" mnemonicParsing="false" text="AB" />
+                              <RadioButton fx:id="zeroRB" disable="true" mnemonicParsing="false" text="0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="280.0" spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="Bračni status">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="marriageTF" disable="true" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="305.0" spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="Broj telefona">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="phoneTF" disable="true" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </content></Tab>
+    <Tab text="Pregledi">
+         <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <VBox spacing="5.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TableView fx:id="examsTV">
+                          <columns>
+                            <TableColumn prefWidth="107.99999845027924" text="Šifra dijagnoze" />
+                            <TableColumn prefWidth="156.0000762939453" text="Datum i vrijeme pregleda" />
+                              <TableColumn minWidth="0.0" prefWidth="102.39996337890625" text="Šifra pregleda" />
+                              <TableColumn minWidth="0.0" prefWidth="175.99990844726562" text="Uključene usluge" />
+                              <TableColumn prefWidth="145.60003662109375" text="Ukupna cijena pregleda" />
+                          </columns>
+                        </TableView>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </content></Tab>
+  </tabs>
+</TabPane>
